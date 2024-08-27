@@ -1,8 +1,13 @@
-import pandas as pd
-import read_csv_file from "./functions"
+import joblib
+model = joblib.load('notebook/linear_regression_model.pkl')
+
+def predict_sales(tv_budget, model):
+     tv_budget_array = [[tv_budget]]
+     predicted_sales = model.predict(tv_budget_array)
+    
+     return predicted_sales[0] 
 
 if __name__ == "__main__":
-    file_path = "../data/dataset.csv"  
-    data = read_csv_file(file_path)
-    if data is not None:
-        print(data.head()) 
+    tv_budget = 180.8 
+    predicted_sales = predict_sales(tv_budget, model)
+    print(f"Predicted Sales for TV budget of {tv_budget}: {predicted_sales}")
