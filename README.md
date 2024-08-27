@@ -12,12 +12,14 @@ This project aims to practice implementing and evaluating a simple linear regres
    - `Sales`: The resulting sales figures (dependent variable).
 
    Sample data:
+      TV     Sales
+0    230.1   22.1
+1     44.5   10.4
+2     17.2    9.3
+3    151.5   18.5
+4    180.8   12.9
 
-
-
-
-
-2. **Model Training**:
+3. **Model Training**:
 - The dataset was split into training and testing sets.
 - A simple linear regression model was trained using the `TV` advertising budget to predict `Sales`.
 - The model was saved using `joblib` for future use.
